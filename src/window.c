@@ -902,7 +902,7 @@ void window_set_visibility(xcb_window_t win, bool visible)
 		xcb_map_window(dpy, win);
 	} else {
 		xcb_unmap_window(dpy, win);
-		set_window_state(win, XCB_ICCCM_WM_STATE_ICONIC);
+		set_window_state(win, XCB_ICCCM_WM_STATE_WITHDRAWN);
 	}
 	xcb_change_window_attributes(dpy, root, XCB_CW_EVENT_MASK, values_on);
 }
